@@ -5,3 +5,42 @@
 {% block banner %}
 	{% include 'includes/banner.html' %}
 {% endblock %}
+
+
+{% block content %}
+<!--  -->
+<div class="jumbotron special">
+  <div class="honoka"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 outline">
+        <h1>{{ SITENAME }}</h1>
+        <p>形態測定学情報サイト</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Meetings -->
+<section class="section section-default">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 subtitle">
+        <h2>集会</h2>
+      </div>
+    </div>
+    {% for ROW in MEETINGS %}
+	<div class="row">
+		{% for title, link, icon in ROW %}
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="{{ link }}"><img src="{{ icon }}"></a>
+          			<div class="caption text-center">
+            			<h4>{{ title }}</h4>
+          			</div>
+        		</div>
+			</div>
+		{% endfor %}
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
