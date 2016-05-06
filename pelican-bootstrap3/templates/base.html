@@ -99,6 +99,19 @@
               title="{{ SITENAME }} {{ category }} ATOM Feed"/>
     {% endif %}
 
+        <!-- Nested Navibar -->
+        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/nestednavimenu.css" type="text/css"/>
+
+    <!-- add target="_blank" to <a> tag if a domain of url indicates "outside" -->
+        <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
+        <script language="JavaScript">
+            $(document).ready( function () {
+            $("a[href^='http']:not([href*='" + location.hostname + "'])").attr('target', '_blank');
+            // alert("test");
+            // alert(location.hostname);
+            })
+        </script>
+
 </head>
 <body class="no-thank-yu">
 
