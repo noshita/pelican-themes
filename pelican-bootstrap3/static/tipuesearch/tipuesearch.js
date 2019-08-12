@@ -47,6 +47,7 @@ http://www.tipue.com/search
                     var locSearch = location.search;
                     var splitted = (new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(locSearch)||[,""]);
                     var searchString = splitted[1].replace(/\+/g, '%20');
+                    
                     try
                     {
                          searchString = decodeURIComponent(searchString);
