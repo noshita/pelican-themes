@@ -85,9 +85,9 @@ http://www.tipue.com/search
                     var found = [];
                     
                     var d_o = $('#tipue_search_input').val();
-                    // d_o = d_o.replace(/\+/g, ' ').replace(/\s\s+/g, ' ');
+                    d_o = d_o.replace(/\+/g, ' ').replace(/\s\s+/g, ' ');
  
-                    // d_o = $.trim(d_o);
+                    d_o = $.trim(d_o);
                     var d = d_o.toLowerCase();
                     
                     if ((d.match("^\"") && d.match("\"$")) || (d.match("^'") && d.match("'$")))
